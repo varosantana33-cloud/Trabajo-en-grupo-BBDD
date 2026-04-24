@@ -1,14 +1,4 @@
-import firebase_admin
-from firebase_admin import credentials, firestore
 from datetime import datetime, timezone
-
-# 1. Autenticación usando el archivo JSON
-cred = credentials.Certificate('credentials/serviceAccountKey.json')
-firebase_admin.initialize_app(cred)
-
-# 2. Instanciar el cliente de Firestore
-db = firestore.client()
-print("✅ Conexión a Firestore establecida correctamente.")
 
 def agregar_muestra(nombre, descripcion): #CREATE
  try:
